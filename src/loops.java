@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class loops {
 
     //Check whether a number prime or not
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a No. : ");
         int n = sc.nextInt();
@@ -22,6 +22,46 @@ public class loops {
         else {
             System.out.println("No. is not prime");
         }
+    }*/
+
+    //Find factorial of a user given no.
+    /*public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num;
+        int fact = 1;
+        System.out.println("Enter No.");
+        num = sc.nextInt();
+        for(int i=1; i<=(num); i++){
+            fact *= i; // 5! = 5*4*3*2*1
+        }
+        System.out.println("n! is : " + fact);
+    }*/
+
+    //wap that reads a set of integers and then print the sum of the even and odd integers
+    public  static  void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num;
+        int choice;
+        int evenSum = 0;
+        int oddSum = 0;
+
+        do{
+            System.out.println("Enter the numbers ");
+            num = sc.nextInt();
+
+            if( num % 2 == 0){
+                evenSum += num;
+            }
+            else {
+               oddSum += num;
+            }
+
+            System.out.println("Do you want to conti. ? enter 1 for yes and 0 for no : ");
+            choice = sc.nextInt();
+        }while (choice==1);
+
+        System.out.println("Sum og enen Numbers : " + evenSum);
+        System.out.println("Sum og odd Numbers : " + oddSum);
     }
 
 

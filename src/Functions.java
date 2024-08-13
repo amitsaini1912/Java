@@ -1,6 +1,25 @@
 import java.util.Scanner;
 
 public class Functions {
+    //Find Factorial of a number
+    public static int factorial(int n){
+        int factorial = 1;
+        for(int i=1; i<=n; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+
+    //Find boinomial coeficients
+    public static int nCr(int n, int r){
+        int factN = factorial(n);
+        int factR = factorial(r);
+        int factNminusR = factorial(n-r);
+
+        int nCr = factN/(factR*factNminusR);
+        return nCr;
+    }
+
     //Swaping two numbers
     public static void printSwapingOfTwoNo(int num1, int num2){//num1 and num2 are parameters or formal parameters
         int temp = num1;
@@ -10,6 +29,13 @@ public class Functions {
         System.out.println("Numbers After Swapping :");
         System.out.println("No. A = "+num1);
         System.out.println("No. B = "+num2);
+    }
+
+    //Product of two numbers
+    public static int multiplication(int A, int B){
+        int multiplication = A*B;
+        System.out.println("Product = " + multiplication);
+        return multiplication;
     }
     //print hello world 5 times
     public static int printHelloWorld(){
@@ -29,6 +55,9 @@ public class Functions {
         int B = sc.nextInt();
 
         //printHelloWorld();
-        printSwapingOfTwoNo(A,B); // A,B are called arguments or actual parameters
+        //printSwapingOfTwoNo(A,B); // A,B are called arguments or actual parameters
+        //multiplication(A,B);
+        //System.out.println(factorial(A));
+        System.out.println(nCr(A,B));
     }
 }

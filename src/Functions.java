@@ -20,6 +20,20 @@ public class Functions {
         return nCr;
     }
 
+    //Check wheather a No. prime or not
+    public static boolean isPrime(int n){
+        if(n==2){
+            return true;
+        }
+
+        for (int i=2; i<Math.sqrt(n); i++){
+            if(n%i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
     //Swaping two numbers
     public static void printSwapingOfTwoNo(int num1, int num2){//num1 and num2 are parameters or formal parameters
         int temp = num1;
@@ -58,6 +72,9 @@ public class Functions {
         //printSwapingOfTwoNo(A,B); // A,B are called arguments or actual parameters
         //multiplication(A,B);
         //System.out.println(factorial(A));
-        System.out.println(nCr(A,B));
+        //System.out.println(nCr(A,B));
+        System.out.println(isPrime(A));
+
+
     }
 }
